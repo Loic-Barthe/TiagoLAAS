@@ -3,4 +3,4 @@ Here it is the repo dedicated to correctly launch TIAGO simulation.
 Ce repository est dédié à la procédure permettant de simuler le comportement d'un robot sur base roulante nomméé TIAGO. Sur ce repository, il est possible de trouver tous les fichiers nécéssaires à la simulation de TIAGO. 
 Ces repositories sont nommés de 1 à 6 et doivent être placés dans le fichier src du workspace  *
 
-![Logo](https://github.com/Loic-Barthe/TiagoLAAS/file_source.png)
+![Logo](https://github.com/Loic-Barthe/TiagoLAAS/blob/main/file_source.png)
