@@ -21,3 +21,29 @@ However, if you choose to install the packages via ROBOTPKG, you'll need to adju
 Please ensure that these environment variables are correctly set to guarantee that the simulation runs smoothly and the packages are properly linked.
 
 https://github.com/Loic-Barthe/TiagoLAAS/blob/main/Rapport_TIAGO_Simulation_LAAS.pdf
+
+
+
+
+
+# TIAGO Simulation Repository
+
+Here is the repository dedicated to properly launching the TIAGO robot simulation. This repository contains all the necessary files to simulate the behavior of TIAGO, a mobile robot with a wheeled base. The simulation process relies on various repositories provided here, each containing specific configurations and assets required for the simulation to work seamlessly.
+
+The repositories are named from 1 to 7, and they need to be placed in the `src` directory of your ROS (Robot Operating System) workspace. Once these files are correctly positioned, you will be able to simulate TIAGO's movements.
+
+## Installation
+
+The `src` directory should be organized as follows:
+
+```markdown
+workspace/
+└── src/
+    ├── repos_1/
+    ├── repos_2/
+    ├── repos_3/
+    ├── repos_4/
+    ├── repos_5/
+    ├── repos_6/
+    └── repos_7/
+
