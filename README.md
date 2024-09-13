@@ -15,17 +15,12 @@ rosdep install --from-paths src
 
 Then, it is necessary to place all packages in the src of your worspace. The src directory should be organized as follows, as shown in the picture bellow.
 
-TIAGO_perso/
-└── src/
-    ├── cpcc2_tiago/
-    ├── crocoddyl/
-    ├── launch_pal/
-    ├── .../
-    ├── .../
-    ├── .../
-    └── urdf_test/
 
-![file_source.png](https://github.com/Loic-Barthe/TiagoLAAS/raw/main/file_source.png)
+<div style="text-align: center;">
+    <img src="https://github.com/Loic-Barthe/TiagoLAAS/raw/main/file_source.png" width="50%" alt="file_source">
+</div>
+
+
 
 Unzip the repos_x files and place them into an already existing workspace. To create a workspace 
 
@@ -42,27 +37,44 @@ Please ensure that these environment variables are correctly set to guarantee th
 
 After cloning the repository into the src folder of the workspace and navigating to the root of the workspace, run the following command to build the cpcc2_tiago package:
 
-colcon build --symlink-install --cmake-args ' -DCMAKE_BUILD_TYPE=RELEASE'
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code>colcon build --symlink-install --cmake-args '-DCMAKE_BUILD_TYPE=RELEASE'</code>
+</pre>
+
 
 You can also run the following command to use only one processor at a time, which will be less resource-intensive for your computer:
 
-MAKEFLAGS="-j 1" colcon build --packages-select <name_of_the_package> --cmake-args -DCMAKE_BUILD_TYPE=Debug 
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code>MAKEFLAGS="-j 1" colcon build --packages-select <name_of_the_package> --cmake-args -DCMAKE_BUILD_TYPE=Debug </code>
+</pre>
 
 
 And then, after building, it is necessary to source the environement by using the command :
 
-. ~/TIAGO_perso/install/setup.bash
+
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code>. ~/TIAGO_perso/install/setup.bash </code>
+</pre>
 
 
 # Launching the simulation
 
 To launch the simulation, open terminator and click on Ctrl + e to split the windows into to half. On one, run the command : 
 
-ros2 launch tiago_gazebo tiago_gazebo.launch.py is_public_sim:=True
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code>ros2 launch tiago_gazebo tiago_gazebo.launch.py is_public_sim:=True </code>
+</pre>
+
 
 And on the othern run 
 
-ros2 launch cpcc2_tiago cpcc2_tiago.launch.py
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code>ros2 launch cpcc2_tiago cpcc2_tiago.launch.py</code>
+</pre>
+
+
+
+
 
 
 
