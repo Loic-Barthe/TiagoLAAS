@@ -95,3 +95,53 @@ And on the othern run
 <pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
 <code>ros2 launch cpcc2_tiago cpcc2_tiago.launch.py</code>
 </pre>
+
+
+
+# Origin of repositories.
+
+All packages, except for cpcc2_tiago, pinocchio, and crocoddyl, can be found on the Pal Robotics GitHub page.
+
+You can find all the packages needed to run the TIAGO simulation on Pal Robotics' GitHub at the following address: https://github.com/orgs/pal-robotics/repositories?type=all
+
+### Warning !
+
+Be aware that if you use the Pal Robotics repositories directly, updates to your PC may affect the locally installed packages due to the frequent updates from Pal Robotics. Therefore, you will need to regularly update the software as follows:
+
+#### How to Update Code from GitHub
+
+To update your local code from a GitHub repository, follow these steps:
+
+1. **Open Your Terminal:**
+   Start by opening your terminal or command prompt. This is where you'll enter the commands to update your code.
+
+2. **Navigate to Your Project Directory:**
+   Use the `cd` command to change to the directory of your project. For example:
+  
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code> cd path/to/your/project</code>
+</pre>
+
+3. **Check the Remote Repositories:**
+   To see which remote repositories are configured, use the command:
+
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code>git remote -v</code>
+</pre>
+
+4. **Check the Current Status:**
+   Before pulling updates, it's a good idea to check the current status of your local repository:
+
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code>git status</code>
+</pre>
+
+5. **Pull Updates from GitHub:**
+   To fetch and integrate changes from the remote repository, use the git pull command. If you're working with a specific branch, such as humble-devel, you would use:
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code>git pull origin humble-devel:humble-devel</code>
+</pre>
+
+This command fetches the latest changes from the humble-devel branch on the remote repository (origin) and merges them into your local humble-devel branch.
+
+   
