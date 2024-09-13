@@ -34,7 +34,7 @@ allowing you to use tools like GDB for debugging, or through ROBOTPKG.
 However, if you choose to install the packages via ROBOTPKG, you'll need to adjust your environment variables accordingly. The necessary changes are outlined in detail in my report.
 Please ensure that these environment variables are correctly set to guarantee that the simulation runs smoothly and the packages are properly linked.
 
-https://github.com/Loic-Barthe/TiagoLAAS/blob/main/Rapport_TIAGO_Simulation_LAAS.pdf
+[Rapport TIAGO Simulation LAAS] https://github.com/Loic-Barthe/TiagoLAAS/blob/main/Rapport_TIAGO_Simulation_LAAS.pdf
 
 
 # Build
