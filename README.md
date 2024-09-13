@@ -6,12 +6,15 @@ Once these files are correctly positioned, you will be able to simulate TIAGO's 
 
 The first thing to do is to create a worskapce : 
 
-cd ~/TIAGO_perso
+<pre style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+<code>cd ~/TIAGO_perso
 mkdir ~/TIAGO_perso/src
 cd ~/TIAGO_perso/src
 git clone https://github.com/Loic-Barthe/TiagoLAAS.git
 cd ~/TIAGO_perso
-rosdep install --from-paths src
+rosdep install --from-paths src</code>
+</pre>
+
 
 Then, it is necessary to place all packages in the src of your worspace. The src directory should be organized as follows, as shown in the picture bellow.
 
