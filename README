@@ -3,9 +3,16 @@ and assets required for the simulation to work seamlessly. The repositories are 
 Once these files are correctly positioned, you will be able to simulate TIAGO's movements.
 
 # Installation
+The first thing to do is to create a worskapce : 
 
+cd ~/TIAGO_perso
+mkdir ~/TIAGO_perso/src
+cd ~/TIAGO_perso/src
+git clone https://github.com/Loic-Barthe/TiagoLAAS.git
+cd ~/TIAGO_perso
+rosdep install --from-paths src
 
-The src directory should be organized as follows, as shown in the picture bellow.
+Then, it is necessary to place all packages in the src of your worspace. The src directory should be organized as follows, as shown in the picture bellow.
 
 workspace/
 └── src/
@@ -21,8 +28,6 @@ workspace/
 
 Unzip the repos_x files and place them into an already existing workspace. To create a workspace 
 
-
-
 There are also two missing packages, as shown in the previous image: Pinocchio and Crocoddyl. These two packages are essential for the simulation and can be installed either in debug mode, 
 allowing you to use tools like GDB for debugging, or through ROBOTPKG.
 
@@ -30,3 +35,19 @@ However, if you choose to install the packages via ROBOTPKG, you'll need to adju
 Please ensure that these environment variables are correctly set to guarantee that the simulation runs smoothly and the packages are properly linked.
 
 https://github.com/Loic-Barthe/TiagoLAAS/blob/main/Rapport_TIAGO_Simulation_LAAS.pdf
+
+
+# Build
+
+After cloning the repository into the src folder of the workspace and navigating to the root of the workspace, run the following command to build the cpcc2_tiago package:
+
+colcon build --symlink-install --cmake-args ' -DCMAKE_BUILD_TYPE=RELEASE'
+
+You can also run the following command to use only one processor at a time, which will be less resource-intensive for your computer:
+
+MAKEFLAGS="-j 1" colcon build --packages-select <name_of_the_package> --cmake-args -DCMAKE_BUILD_TYPE=Debug 
+
+
+And then, after building, it is necessary to source the environement by using the command :
+
+. ~/TIAGO_perso/install/setup.bash
