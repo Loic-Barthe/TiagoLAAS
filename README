@@ -1,11 +1,17 @@
-Here is the repository dedicated to properly launching the TIAGO robot simulation.
-
-This repository contains all the necessary files to simulate the behavior of TIAGO, a mobile robot with a wheeled base. The simulation process relies on various repositories provided here, each containing specific configurations 
+Here is the repository dedicated to properly launching the TIAGO robot simulation. This repository contains all the necessary files to simulate the behavior of TIAGO, a mobile robot with a wheeled base. The simulation process relies on various repositories provided here, each containing specific configurations 
 and assets required for the simulation to work seamlessly. The repositories are named from 1 to 7, and they need to be placed in the src directory of your ROS (Robot Operating System) workspace. 
 Once these files are correctly positioned, you will be able to simulate TIAGO's movements.
 
+# Installation
+
+
+
 The src directory should be organized as follows
+
 ![Logo](https://github.com/Loic-Barthe/TiagoLAAS/raw/main/file_source.png)
+
+Unzip the repos_x files and place them into an already existing workspace. To create a workspace 
+
 
 
 There are also two missing packages, as shown in the previous image: Pinocchio and Crocoddyl. These two packages are essential for the simulation and can be installed either in debug mode, 
